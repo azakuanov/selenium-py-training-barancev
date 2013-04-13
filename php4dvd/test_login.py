@@ -9,10 +9,10 @@ def test_login_with_valid_credentials(app):
     app.login(User.Admin())
     assert app.is_logged_in()
     app.logout()
-    assert not app.is_logged_in()
+    assert app.is_not_logged_in()
 
 
 def test_login_with_invalid_credentials(app):
     app.go_to_home_page()
     app.login(User.random())
-    assert not app.is_logged_in()
+    assert app.is_not_logged_in()
