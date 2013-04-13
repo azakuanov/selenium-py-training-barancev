@@ -11,6 +11,7 @@ class Page(object):
 
     def is_element_visible(self, locator):
         try:
-            return self.wait.until(visibility_of_element_located(locator))
+            self.wait.until(visibility_of_element_located(locator))
+            return True
         except WebDriverException:
             return False

@@ -18,4 +18,4 @@ class LoginPage(Page):
 
     @property
     def is_this_page(self):
-        return self.is_element_visible((By.CSS_SELECTOR, "nav"))
+        return self.is_element_visible((By.ID, "loginform"))
