@@ -9,6 +9,10 @@ class InternalPage(Page):
         return self.driver.find_element_by_css_selector("nav a[href $= '?logout']")
 
     @property
+    def user_profile_link(self):
+        return self.driver.find_element_by_css_selector("nav a[href $= '?go=profile']")
+
+    @property
     def user_management_link(self):
         return self.driver.find_element_by_css_selector("nav a[href $= '?go=users']")
 
